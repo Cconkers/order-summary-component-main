@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+:root {
+  //  Primary
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  // Neutral
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: Outfit;
+}
+.container {
+  background-color: beige;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  &__backgroundUp {
+    position: relative;
+    bottom: 150px;
+    img {
+      transform: rotate(360deg);
+      width: 100%;
+    }
+  }
+  &__backgroundDown {
+    position: relative;
+    bottom: 40%;
+    img {
+      transform: rotate(180deg);
+      width: 100%;
+      filter: brightness(104%);
+    }
+    &-complete {
+      position: relative;
+      bottom: 41%;
+      height: 12rem;
+      width: 100%;
+      background-color: hsl(225, 100%, 94%);
+    }
+  }
+  &__card {
+    margin: auto;
+    border-radius: 15px;
+    position: relative;
+    bottom: 120%;
+    width: 30rem;
+    height: 40rem;
+    background-color: white;
+    text-align: center;
+    img {
+      border-radius: 15px 15px 0px 0;
+      width: 100%;
+    }
+    p {
+      color: var(--desaturated-blue);
+      margin: auto;
+      width: 70%;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    &-annualPlan {
+      margin: auto;
+      background-color: var(--very-pale-blue);
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .annualplan-and-icon {
+        display: flex;
+        margin-right: 2rem;
+        align-items: center;
+        img {
+          margin: 1rem;
+          width: 3rem;
+        }
+        p {
+          text-align: left;
+          margin: 0;
+        }
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+    a:hover {
+      text-decoration: none;
+      color: rgba(118, 108, 241, 255);
+    }
+  }
+  .buttons {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 80%;
+    a {
+      text-decoration: none;
+      color: var(--desaturated-blue);
+      font-weight: 700;
+    }
+    a:hover {
+      color: black;
+    }
+    .btn1 {
+      color: var(--very-pale-blue);
+      background-color: #382ae1;
+      border-radius: 5px;
+      padding: 0.7rem;
+      font-family: Outfit;
+      font-size: 16px;
+      margin: 1.5rem 0;
+      border: none;
+      box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.309);
+    }
+    .btn1:hover {
+      cursor: pointer;
+      background-color: rgba(118, 108, 241, 255);
+    }
+  }
+}
